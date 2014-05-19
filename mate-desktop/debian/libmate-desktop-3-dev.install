@@ -1,0 +1,3 @@
+usr/include/mate-desktop-3.0/
+usr/lib/*/*.so
+usr/lib/*/pkgconfig/

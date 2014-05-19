@@ -22,11 +22,11 @@ override_dh_auto_configure:
 		--disable-schemas-compile \
 		--enable-gtk-doc \
 		--enable-mpaste \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip -pmate-desktop --dbg-package=mate-desktop-dbg
-	dh_strip -plibmate-desktop-2-17 --dbg-package=libmate-desktop-2-17-dbg
+	dh_strip -plibmate-desktop-3-17 --dbg-package=libmate-desktop-3-17-dbg
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=..
