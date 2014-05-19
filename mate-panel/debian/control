@@ -14,8 +14,8 @@ Build-Depends: debhelper (>= 9),
                libxau-dev,
                libice-dev,
                libsm-dev,
-               libgtk2.0-dev,
-               libmate-desktop-dev,
+               libgtk-3-dev,
+               libmate-desktop-3-dev,
                libcairo2-dev,
                gtk-doc-tools,
                libmate-menu-dev,
@@ -26,15 +26,15 @@ Build-Depends: debhelper (>= 9),
                libdbus-glib-1-dev,
                libdbus-1-dev,
                libxrandr-dev,
-               libcanberra-gtk-dev,
+               libcanberra-gtk3-dev,
                libsoup2.4-dev,
                libavahi-client-dev,
                libavahi-common-dev,
                libavahi-glib-dev,
-               libwnck-dev,
+               libwnck-3-dev,
                libgirepository1.0-dev,
                gobject-introspection,
-               gir1.2-gtk-2.0,
+               gir1.2-gtk-3.0,
                gir1.2-glib-2.0,
                gir1.2-atk-1.0,
                gir1.2-freedesktop,
@@ -109,10 +109,13 @@ Depends: ${shlibs:Depends},
 Breaks: mate-panel (<= 1.0.0-3), 
         libmatepanelapplet,
         libmate-panel-applet4-1,
+        libmate-panel-applet-4-1
 Replaces: libmatepanelapplet,
           libmate-panel-applet4-1,
+          libmate-panel-applet-4-1
 Provides: libmatepanelapplet,
           libmate-panel-applet4-1,
+          libmate-panel-applet-4-1
 Description: library for MATE Panel applets
  The MATE Panel is an essential part of the MATE Desktop, providing
  toolbar-like “panels” which can be attached to the sides of your desktop.
@@ -151,7 +154,7 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libmate-panel-applet-4-1 (= ${binary:Version}),
-         libgtk2.0-dev,
+         libgtk-3-dev,
          libglib2.0-dev
 Provides: libmatepanelapplet-dev
 Conflicts: libmatepanelapplet-dev
@@ -191,7 +194,7 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          ${python:Depends},
          ${gir:Depends},
-         gir1.2-gtk-2.0
+         gir1.2-gtk-3.0
 Description: GObject introspection data for MATE panel
  The MATE Panel is an essential part of the MATE Desktop, providing
  toolbar-like “panels” which can be attached to the sides of your desktop.

@@ -5,18 +5,17 @@ Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Uploaders: Steve Zesch <stevezesch2@gmail.com>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 9),
-               libgtk2.0-dev,
+               libgtk-3-dev,
                libglib2.0-dev,
                libgtop2-dev,
                libxklavier-dev,
-               libwnck-dev,
-               libmate-desktop-dev,
+               libwnck-3-dev,
+               libmate-desktop-3-dev,
                libmate-panel-applet-dev,
                libmateweather-dev,
                libnotify-dev,
                libdbus-1-dev,
                libdbus-glib-1-dev,
-               python-gtk2-dev,
                python-gobject-dev,
                libxml2-dev,
                libpolkit-gobject-1-dev,
@@ -44,7 +43,7 @@ Build-Depends: debhelper (>= 9),
                mate-common,
                mate-icon-theme,
                libsoup2.4-dev,
-               libgtksourceview2.0-dev
+               libgtksourceview-3.0-dev
 Homepage: http://www.mate-desktop.org/
 
 Package: mate-applets
