@@ -18,7 +18,7 @@ override_dh_auto_configure:
 		--libexecdir=/usr/lib \
 		--disable-introspection \
 		--disable-upower \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip --dbg-package=mate-session-manager-dbg

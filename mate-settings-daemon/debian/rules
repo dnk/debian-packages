@@ -22,7 +22,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--disable-pulse \
 	--enable-gstreamer \
 	--enable-polkit \
-	--with-gtk=2.0
+	--with-gtk=3.0
 
 common-install-indep:: remove-cruft
 common-install-arch:: remove-cruft
@@ -33,7 +33,7 @@ remove-cruft::
 
 configure/mate-settings-daemon-pulse:: $(DEB_BUILDDIR_mate-settings-daemon-pulse)/config.status
 $(DEB_BUILDDIR_mate-settings-daemon-pulse)/config.status:
-	cp -a `find . -maxdepth 1 -mindepth 1 -not -name debian` $(DEB_SRCDIR_mate-settings-daemon-pulse)/$*
+	cp -a `find . -maxdepth 1 -mindepth 1 -not -name debian -and -not -name .git` $(DEB_SRCDIR_mate-settings-daemon-pulse)/$*
 	cd $(DEB_BUILDDIR_mate-settings-daemon-pulse) && \
 		$(DEB_CONFIGURE_SCRIPT_ENV) $(DEB_CONFIGURE_SCRIPT) \
 			$(DEB_CONFIGURE_NORMAL_ARGS) \
@@ -43,7 +43,7 @@ $(DEB_BUILDDIR_mate-settings-daemon-pulse)/config.status:
 			--enable-pulse \
 			--disable-gstreamer \
 			--enable-polkit \
-			--with-gtk=2.0 \
+			--with-gtk=3.0 \
 			$(DEB_CONFIGURE_USER_FLAGS)
 
 build/mate-settings-daemon-pulse::
