@@ -21,7 +21,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += --libexecdir=/usr/lib/mate-media \
 		--disable-scrollkeeper \
 		--enable-gstmix \
 		--enable-gst-mixer-applet \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 #DEB_MAKE_INSTALL_TARGET = install DESTDIR=$(DEB_DESTDIR) MATECONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
@@ -38,7 +38,7 @@ $(DEB_BUILDDIR_mate-media-pulse)/config.status:
 			--disable-scrollkeeper \
 			--disable-gstmix \
 			--disable-gst-mixer-applet \
-			--with-gtk=2.0 \
+			--with-gtk=3.0 \
 			$(DEB_CONFIGURE_USER_FLAGS)
 
 build/mate-media-pulse::
