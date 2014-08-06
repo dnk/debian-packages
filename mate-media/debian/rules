@@ -27,7 +27,7 @@ DEB_CONFIGURE_EXTRA_FLAGS += --libexecdir=/usr/lib/mate-media \
 
 configure/mate-media-pulse:: $(DEB_BUILDDIR_mate-media-pulse)/config.status
 $(DEB_BUILDDIR_mate-media-pulse)/config.status:
-	cp -a `find . -maxdepth 1 -mindepth 1 -not -name debian` $(DEB_SRCDIR_mate-media-pulse)/$*
+	cp -a `find . -maxdepth 1 -mindepth 1 -not -name debian -and -not -name .git` $(DEB_SRCDIR_mate-media-pulse)/$*
 	cd $(DEB_BUILDDIR_mate-media-pulse) && \
 		$(DEB_CONFIGURE_SCRIPT_ENV) $(DEB_CONFIGURE_SCRIPT) \
 			$(DEB_CONFIGURE_NORMAL_ARGS) \
