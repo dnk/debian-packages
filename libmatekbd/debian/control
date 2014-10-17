@@ -9,7 +9,7 @@ Uploaders:
 Build-Depends:
  debhelper (>= 9),
  libglib2.0-dev,
- libgtk2.0-dev,
+ libgtk-3-dev,
  libxklavier-dev,
  intltool,
  mate-common,
@@ -65,7 +65,7 @@ Depends:
  ${misc:Depends},
  libmatekbd4 (= ${binary:Version}),
  libglib2.0-dev,
- libgtk2.0-dev,
+ libgtk-3-dev,
  libxklavier-dev,
  libx11-dev,
 Description: MATE library to manage keyboard configuration (development files)
