@@ -1,3 +1,6 @@
+etc/xdg/autostart/
+usr/share/applications/
 usr/share/locale/
-usr/share/man/man1/mate-volume-control.1
-usr/share/MateConf/gsettings/mate-volume-control.convert
+usr/share/man/
+usr/share/mate-media/
+usr/share/sounds/
