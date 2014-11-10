@@ -1,3 +1,9 @@
+mate-desktop (1.9.3) UNRELEASED; urgency=medium
+
+  * New development release.
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Thu, 06 Nov 2014 12:06:42 +0300
+
 mate-desktop (1.9.2-1) unstable; urgency=low
 
   * New upstream development release.
