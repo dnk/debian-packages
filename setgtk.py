@@ -40,6 +40,9 @@ replaces.append(["libmate-desktop-2-17", "libmate-desktop-3-17"])
 replaces.append(["libmate-desktop-2-17-dbg", "libmate-desktop-3-17-dbg"])
 
 
+# this one is currently used for atril only
+replaces.append(["libwebkitgtk-dev", "libwebkit2gtk-3.0-dev"])
+
 for package in packages:
 	if os.path.isdir(package):
 		for dfile in ["control", "rules"]:

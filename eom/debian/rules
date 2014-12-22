@@ -3,10 +3,11 @@
 DHFLAGS=--parallel
 
 %:
-	dh $@ $(DHFLAGS) $(DHFLAGS)
+	dh $@ $(DHFLAGS)
 
 override_dh_install:
 	rm -rfv debian/tmp/usr/share/MateConf/ 
+	rm -rfv debian/tmp/usr/lib/*/eom/plugins/*.la
 	dh_install --fail-missing
 
 override_dh_auto_configure:

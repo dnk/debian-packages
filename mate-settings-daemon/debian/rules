@@ -6,8 +6,8 @@ DHFLAGS=--parallel
 	dh $@ $(DHFLAGS)
 
 override_dh_install:
-	rm -fv debian/tmp/usr/lib/*/mate-settings-daemon/*.la
-	rm -fv debian/tmp/usr/share/MateConf/gsettings/*.convert
+	rm -rfv debian/tmp/usr/lib/*/mate-settings-daemon/*.la
+	rm -rfv debian/tmp/usr/share/MateConf/gsettings/*.convert
 	dh_install --fail-missing
 
 override_dh_auto_configure:
@@ -15,9 +15,12 @@ override_dh_auto_configure:
 	NOCONFIGURE=1 ./autogen.sh
 	dh_auto_configure $(DHFLAGS) -- \
 		--disable-static \
-		--enable-polkit \
+		--enable-pulse \
 		--libexecdir=/usr/bin \
 		--with-gtk=3.0
+
+override_dh_strip:
+	dh_strip --dbg-package=mate-settings-daemon-dbg
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=..

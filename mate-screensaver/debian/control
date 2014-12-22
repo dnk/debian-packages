@@ -1,5 +1,5 @@
 Source: mate-screensaver
-Section: mate
+Section: x11
 Priority: optional
 Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Uploaders: Steve Zesch <stevezesch2@gmail.com>
@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev,
                libgtk2.0-dev,
                libmate-menu-dev,
-               libmate-desktop-dev (>= 1.9.3),
+               libmate-desktop-dev (>= 1.9.4),
                libstartup-notification0-dev,
                libmatekbd-dev,
                libxt-dev,
@@ -25,6 +25,7 @@ Build-Depends: debhelper (>= 9),
                libgl1-mesa-dev | libgl1-mesa-swx11-dev,
                libnotify-dev,
                libsystemd-login-dev,
+               libdconf-dev,
                mate-common,
 Standards-Version: 3.9.4
 Homepage: http://www.mate-desktop.org/
@@ -38,6 +39,7 @@ Depends: ${shlibs:Depends},
          mate-session-manager
 Recommends: mate-power-manager
 Suggests: xscreensaver-data, rss-glx
+Breaks: mate-screensaver-common (<< 1.8.0)
 Description: MATE screen saver and locker
  mate-screensaver is a screen saver and locker that aims to have simple,
  sane and secure defaults, and be well integrated with the MATE desktop.
@@ -65,8 +67,10 @@ Architecture: any
 Depends: ${misc:Depends},
          mate-screensaver (= ${binary:Version})
 Description: MATE screen saver and locker (debugging symbols)
- This package contains debugging symbols for MATE screensaver. It is
- provided to help debugging problems.
+ mate-screensaver is a screen saver and locker that aims to have simple,
+ sane and secure defaults, and be well integrated with the MATE desktop.
  .
- The debugging symbols are installed  in /usr/lib/debug and will
+ This package contains debugging symbols for MATE screensaver.
+ .
+ The debugging symbols are installed in /usr/lib/debug and will
  automatically be used by gdb.

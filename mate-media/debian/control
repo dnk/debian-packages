@@ -10,16 +10,12 @@ Build-Depends: cdbs,
                intltool,
                libglib2.0-dev,
                libgtk-3-dev,
-               libpulse-dev,
                libcanberra-gtk3-dev,
                libxml2-dev,
                libunique-3.0-dev,
-               libgstreamer0.10-dev,
-               libgstreamer-plugins-base0.10-dev,
-               docbook-utils,
-               yelp-tools,
                mate-common,
-               libmate-desktop-dev
+               libmatemixer-dev (>= 1.9.1),
+               libmate-desktop-dev (>= 1.9.3)
 
 Package: mate-media
 Architecture: any
@@ -29,21 +25,39 @@ Depends: ${shlibs:Depends},
          x11-utils
 Recommends: alsa-utils,
             sound-theme-freedesktop
-Replaces: mate-media (<< 1.2.1-4)
-Conflicts: mate-media-pulse,
-           mate-media-gstreamer
-Description: MATE media utilities (GStreamer backend)
- This package contains a few media utilities for the MATE desktop:
-  * the MATE GStreamer-based audio mixer and applet.
-  .
-  This package uses GStreamer for mate-media package.
+Replaces: mate-media-pulse (<< 1.9.0),
+          mate-media-gstreamer (<< 1.9.0)
+Breaks: mate-media-pulse (<< 1.9.0),
+        mate-media-gstreamer (<< 1.9.0)
+Description: MATE media utilities
+ MATE media utilities are the audio mixer and the volume
+ control applet.
 
 Package: mate-media-common
 Architecture: all
 Depends: ${misc:Depends}
-Replaces: mate-media (<< 1.2.1-4)
-Breaks: mate-media (<< 1.2.1-4)
+Replaces: mate-media-pulse (<< 1.9.0),
+          mate-media-gstreamer (<< 1.9.0)
+Breaks: mate-media-pulse (<< 1.9.0),
+        mate-media-gstreamer (<< 1.9.0)
 Description: MATE media utilities (common files)
- This package contains a few media utilities for the MATE desktop.
+ MATE media utilities are the audio mixer and the volume
+ control applet.
  .
  This package contains the common files.
+
+Package: mate-media-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+         mate-media (= ${binary:Version})
+Description: MATE media utilities (debugging symbols)
+ MATE media utilities are the audio mixer and the volume
+ control applet.
+ .
+ This package contains debugging symbols for MATE media
+ utilities.
+ .
+ The debugging symbols are installed in /usr/lib/debug and will
+ automatically be used by gdb.
