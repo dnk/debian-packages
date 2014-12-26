@@ -1,3 +1,9 @@
+libmatemixer (1.9.2) UNRELEASED; urgency=medium
+
+  * New development release.
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Fri, 26 Dec 2014 14:31:54 +0300
+
 libmatemixer (1.9.0-1) unstable; urgency=medium
 
   * New upstream development release.
