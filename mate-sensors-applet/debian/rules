@@ -16,8 +16,10 @@ DHFLAGS=--parallel
 	dh $@ $(DHFLAGS)
 
 override_dh_install:
-	rm -rfv debian/tmp/usr/lib/*/*.la 
-	rm -rfv debian/tmp/usr/lib/*/*/*.la 
+	rm -rfv debian/tmp/usr/lib/*/*.a
+	rm -rfv debian/tmp/usr/lib/*/*.la
+	rm -rfv debian/tmp/usr/lib/*/mate-sensors-applet/plugins/*.a
+	rm -rfv debian/tmp/usr/lib/*/mate-sensors-applet/plugins/*.la
 	dh_install --fail-missing
 
 override_dh_auto_configure:
@@ -29,7 +31,8 @@ override_dh_auto_configure:
 		--with-gtk=2.0
 
 override_dh_strip:
-	dh_strip --dbg-package=mate-sensors-applet-dbg
+	dh_strip -pmate-sensors-applet --dbg-package=mate-sensors-applet-dbg
+	dh_strip -plibmate-sensors-applet-plugin0 --dbg-package=libmate-sensors-applet-plugin0-dbg
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=..
