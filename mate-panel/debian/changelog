@@ -1,8 +1,8 @@
-mate-panel (1.9.4) UNRELEASED; urgency=medium
+mate-panel (1.9.4-1) unstable; urgency=low
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Fri, 26 Dec 2014 12:23:26 +0300
+ -- Stefano Karapetsas <stefano@karapetsas.com>  Tue, 20 Jan 2015 19:40:09 +0100
 
 mate-panel (1.9.2-1) unstable; urgency=medium
 

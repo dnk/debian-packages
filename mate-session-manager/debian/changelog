@@ -1,8 +1,8 @@
-mate-session-manager (1.9.3) UNRELEASED; urgency=medium
+mate-session-manager (1.9.3-1) unstable; urgency=low
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Fri, 26 Dec 2014 14:38:24 +0300
+ -- Stefano Karapetsas <stefano@karapetsas.com>  Tue, 20 Jan 2015 19:35:50 +0100
 
 mate-session-manager (1.9.2-1) unstable; urgency=medium
 
