@@ -25,7 +25,7 @@ override_dh_auto_configure:
 		--with-console-kit \
 		--with-libnotify \
 		--enable-locking \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip --dbg-package=mate-screensaver-dbg
