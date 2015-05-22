@@ -5,7 +5,7 @@ Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Uploaders: Steve Zesch <stevezesch2@gmail.com>
 Build-Depends: debhelper (>= 9),
                libglib2.0-dev,
-               libgtk2.0-dev,
+               libgtk-3-dev,
                libcaja-extension-dev,
                libjson-glib-dev,
                libmagic-dev,
