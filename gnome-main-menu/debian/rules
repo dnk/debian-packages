@@ -15,7 +15,7 @@ override_dh_auto_configure:
 	dh_auto_configure $(DHFLAGS) -- \
 		--enable-caja-extension \
 		--disable-static \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip --dbg-package=gnome-main-menu-dbg

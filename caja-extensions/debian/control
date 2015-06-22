@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9),
                libcaja-extension-dev,
                libmate-desktop-dev,
                mate-common,
-               libgtk2.0-dev,
+               libgtk-3-dev,
                libgupnp-1.0-dev,
                libdbus-1-dev,
                libdbus-glib-1-dev

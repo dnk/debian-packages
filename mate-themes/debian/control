@@ -9,7 +9,7 @@ Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9),
                mate-common,
 Build-Depends-Indep: libxml-parser-perl,
-                     libgtk2.0-dev,
+                     libgtk-3-dev,
                      icon-naming-utils,
                      pkg-config,
                      intltool,

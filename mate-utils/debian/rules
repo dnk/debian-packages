@@ -17,7 +17,7 @@ override_dh_auto_configure:
 		--enable-deprecated \
 		--disable-static \
 		--disable-maintainer-flags \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip -pmate-utils --dbg-package=mate-utils-dbg

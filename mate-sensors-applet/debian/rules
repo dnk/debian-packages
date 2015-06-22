@@ -28,7 +28,7 @@ override_dh_auto_configure:
 		--libexecdir=/usr/lib/mate-sensors-applet \
 		$(DEB_CONFIGURE_EXTRA_FLAGS) \
 		--with-nvidia=yes \
-		--with-gtk=2.0
+		--with-gtk=3.0
 
 override_dh_strip:
 	dh_strip -pmate-sensors-applet --dbg-package=mate-sensors-applet-dbg
