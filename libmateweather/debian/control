@@ -2,21 +2,20 @@ Source: libmateweather
 Section: libs
 Priority: optional
 Maintainer: MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>
-Uploaders:
- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
- Stefano Karapetsas <stefano@karapetsas.com>,
- Mike Gabriel <sunweaver@debian.org>,
-Build-Depends: debhelper (>= 9),
-               mate-common,
-               autotools-dev,
-               libxml2-dev,
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
+           Stefano Karapetsas <stefano@karapetsas.com>,
+           Mike Gabriel <sunweaver@debian.org>,
+Build-Depends: autotools-dev,
+               debhelper (>= 9),
+               gtk-doc-tools,
                libglib2.0-dev,
-               libgtk-3-dev,
-               libsoup2.4-dev,
+               libgtk2.0-dev,
                libsoup-gnome2.4-dev,
+               libsoup2.4-dev,
+               libxml2-dev,
                libxml2-utils,
-               gtk-doc-tools
-Standards-Version: 3.9.5
+               mate-common,
+Standards-Version: 3.9.6
 Homepage: http://www.mate-desktop.org/
 Vcs-Browser: https://github.com/mate-desktop/debian-packages
 Vcs-Git: git://github.com/mate-desktop/debian-packages.git
@@ -24,15 +23,15 @@ Vcs-Git: git://github.com/mate-desktop/debian-packages.git
 Package: libmateweather1
 Architecture: any
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends},
-             multiarch-support,
-Depends: ${shlibs:Depends},
+Pre-Depends: multiarch-support,
+             ${misc:Pre-Depends},
+Depends: libmateweather-common (= ${source:Version}),
          ${misc:Depends},
-         libmateweather-common (= ${source:Version}),
-Provides: libmateweather
-Breaks: libmateweather
-Conflicts: libmateweather
-Replaces: libmateweather
+         ${shlibs:Depends},
+Provides: libmateweather,
+Breaks: libmateweather,
+Conflicts: libmateweather,
+Replaces: libmateweather,
 Description: MateWeather shared library
  libmateweather is a library to access weather information from online
  services for numerous locations.
@@ -42,9 +41,9 @@ Description: MateWeather shared library
 Package: libmateweather-common
 Architecture: all
 Multi-Arch: foreign
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-Breaks: libmateweather (<= 1.0.0-3)
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: libmateweather (<= 1.0.0-3),
 Description: MateWeather shared library (common files)
  libmateweather is a library to access weather information from online
  services for numerous locations.
@@ -55,14 +54,14 @@ Package: libmateweather-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
+Depends: libglib2.0-dev,
+         libgtk2.0-dev,
          libmateweather1 (= ${binary:Version}),
-         libxml2-dev,
-         libglib2.0-dev,
-         libgtk-3-dev,
-         libsoup2.4-dev,
          libsoup-gnome2.4-dev,
+         libsoup2.4-dev,
+         libxml2-dev,
+         ${misc:Depends},
+         ${shlibs:Depends},
 Description: MateWeather shared library (development files)
  libmateweather is a library to access weather information from online
  services for numerous locations.
@@ -77,8 +76,8 @@ Multi-Arch: same
 Provides: libmateweather-dbg,
 Breaks: libmateweather-dbg,
 Replaces: libmateweather-dbg,
-Depends: ${misc:Depends},
-         libmateweather1 (= ${binary:Version}),
+Depends: libmateweather1 (= ${binary:Version}),
+         ${misc:Depends},
 Description: MateWeather shared library (debugging symbols)
  libmateweather is a library to access weather information from online
  services for numerous locations.

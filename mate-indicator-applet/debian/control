@@ -2,7 +2,10 @@ Source: mate-indicator-applet
 Section: x11
 Priority: optional
 Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
-Uploaders: Steve Zesch <stevezesch2@gmail.com>
+Uploaders: Mike Gabriel <sunweaver@debian.org>,
+           John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
+           Stefano Karapetsas <stefano@karapetsas.com>,
+           Vangelis Mouhtsis <vangelis@gnugr.org>,
 Build-Depends: debhelper (>= 9),
                libgtk2.0-dev,
                libmate-panel-applet-dev,
@@ -14,7 +17,7 @@ Build-Depends: debhelper (>= 9),
                gtk-doc-tools,
                libindicator-dev (>= 0.3.90),
                mate-common
-Standards-Version: 3.9.3
+Standards-Version: 3.9.6
 Homepage: http://www.mate-desktop.org
 
 Package: mate-indicator-applet
@@ -31,8 +34,8 @@ Description: MATE panel indicator applet
 Package: mate-indicator-applet-common
 Architecture: all
 Depends: ${misc:Depends}
-Replaces: mate-indicator-applet (<< 1.8.0)
-Breaks: mate-indicator-applet (<< 1.8.0)
+Replaces: mate-indicator-applet (<< 1.9.0)
+Breaks: mate-indicator-applet (<< 1.9.0)
 Description: MATE panel indicator applet (common files)
  indicator-applet is an applet to display information from
  various applications consistently in the MATE panel.
