@@ -5,25 +5,26 @@ Maintainer: MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>
 Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
            Stefano Karapetsas <stefano@karapetsas.com>,
            Mike Gabriel <sunweaver@debian.org>,
+           Martin Wimpress <code@flexion.org>,
 Build-Depends: debhelper (>= 9),
                dh-python,
+               gobject-introspection,
+               gtk-doc-tools,
                intltool,
+               libdconf-dev (>= 0.10.0),
+               libgirepository1.0-dev,
                libglib2.0-dev,
+               libglib2.0-doc,
                libgtk-3-dev,
+               libgtk-3-doc,
                libstartup-notification0-dev,
                libx11-dev,
-               libxrandr-dev,
                libxml2-dev,
-               gtk-doc-tools,
+               libxrandr-dev,
+               mate-common,
                python-dev,
                python-support,
-               libglib2.0-doc,
-               libgtk-3-doc,
-               mate-common,
                yelp-tools,
-               libdconf-dev (>= 0.10.0),
-               gobject-introspection,
-               libgirepository1.0-dev
 Standards-Version: 3.9.6
 Homepage: http://www.mate-desktop.org/
 Vcs-Browser: https://github.com/mate-desktop/debian-packages
@@ -32,13 +33,13 @@ Vcs-Git: git://github.com/mate-desktop/debian-packages.git
 Package: mate-desktop
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         hicolor-icon-theme,
+Depends: hicolor-icon-theme,
          libmate-desktop-3-17,
          mate-desktop-common (= ${source:Version}),
-Breaks: mate-desktop-gnome
-Replaces: mate-desktop-gnome
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: mate-desktop-gnome,
+Replaces: mate-desktop-gnome,
 Description: Library with common API for various MATE modules
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
@@ -51,9 +52,9 @@ Description: Library with common API for various MATE modules
 
 Package: mate-desktop-common
 Architecture: all
-Depends: ${misc:Depends}
-Breaks: mate-desktop (<< 1.1.1-1)
-Replaces: mate-desktop (<< 1.1.1-1)
+Depends: ${misc:Depends},
+Breaks: mate-desktop (<< 1.1.1-1),
+Replaces: mate-desktop (<< 1.1.1-1),
 Description: Library with common API for various MATE modules (common files)
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
@@ -67,11 +68,11 @@ Description: Library with common API for various MATE modules (common files)
 Package: libmate-desktop-3-17
 Architecture: any
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends},
-             multiarch-support,
+Pre-Depends: multiarch-support,
+             ${misc:Pre-Depends},
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-Provides: libmatedesktop
+Provides: libmatedesktop,
 Breaks: libmatedesktop (<< 1.6.1),
 Replaces: libmatedesktop (<< 1.6.1),
 Description: Library with common API for various MATE modules (library)
@@ -84,19 +85,19 @@ Description: Library with common API for various MATE modules (library)
  .
  The package contains the actual mate-desktop library.
 
-Package: libmate-desktop-dev
+Package: libmate-desktop-3-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         libmate-desktop-3-17 (= ${binary:Version}),
-         libstartup-notification0-dev,
+Depends: libdconf-dev,
          libgdk-pixbuf2.0-dev,
          libgtk-3-dev,
-         libdconf-dev,
-Breaks: libmatedesktop-dev
-Replaces: libmatedesktop-dev
+         libmate-desktop-3-17 (= ${binary:Version}),
+         libstartup-notification0-dev,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: libmatedesktop-dev,
+Replaces: libmatedesktop-dev,
 Description: Library with common API for various MATE modules (development files)
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
@@ -111,9 +112,9 @@ Package: libmate-desktop-doc
 Section: doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
-Breaks: libmatedesktop-doc
-Replaces: libmatedesktop-doc
+Depends: ${misc:Depends},
+Breaks: libmatedesktop-doc,
+Replaces: libmatedesktop-doc,
 Description: Library with common API for various MATE modules (documentation files)
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
@@ -124,13 +125,25 @@ Description: Library with common API for various MATE modules (documentation fil
  .
  This package contains the documentation files.
 
+Package: mate-user-guide
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+         yelp
+Description: User documentation for MATE Desktop
+ The MATE component mate-desktop contains the libmate-desktop library, the
+ mate-about program, as well as some desktop-wide documents.
+ .
+ This package contains the user guide for MATE Desktop and its main
+ applications.
+
 Package: mate-desktop-dbg
 Section: debug
 Priority: extra
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends},
-         mate-desktop (= ${binary:Version}),
+Depends: mate-desktop (= ${binary:Version}),
+         ${misc:Depends},
 Description: Library with common API for various MATE modules (debugging symbols)
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
@@ -148,8 +161,8 @@ Section: debug
 Priority: extra
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends},
-         libmate-desktop-3-17 (= ${binary:Version}),
+Depends: libmate-desktop-3-17 (= ${binary:Version}),
+         ${misc:Depends},
 Breaks: mate-desktop-dbg (<= 1.8.0+dfsg1-2),
 Replaces: mate-desktop-dbg (<= 1.8.0+dfsg1-2),
 Description: Library with common API for various MATE modules (library debugging symbols)
@@ -165,10 +178,11 @@ Description: Library with common API for various MATE modules (library debugging
  by gdb.
 
 Package: gir1.2-mate-desktop
+Section: introspection
 Architecture: any
 Depends: ${gir:Depends},
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: GObject introspection data for the mate-desktop library
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.

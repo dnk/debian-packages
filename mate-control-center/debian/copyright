@@ -38,7 +38,7 @@ Files: libslab/app-resizer.c
        libslab/tile.h
 Copyright: 2006-2007, Novell, Inc.
 License: LGPL-2+
- 
+
 Files: capplets/appearance/appearance-desktop.c
        capplets/appearance/appearance-desktop.h
        capplets/appearance/appearance-main.c
@@ -56,7 +56,7 @@ Files: capplets/appearance/appearance-desktop.c
        capplets/keyboard/mate-keyboard-properties-a11y.c
 Copyright: 2007-2010, The GNOME Foundation
 License: GPL-2+
- 
+
 Files: capplets/appearance/mate-wp-info.c
        capplets/appearance/mate-wp-info.h
        capplets/appearance/mate-wp-item.c
@@ -74,7 +74,7 @@ Files: capplets/display/mate-display-properties-install-systemwide.c
        shell/control-center.c
 Copyright: 2006-2010 Novell, Inc.
 License: GPL-2+
- 
+
 Files: capplets/keyboard/mate-keyboard-properties-xkb.c
        capplets/keyboard/mate-keyboard-properties-xkblt.c
        capplets/keyboard/mate-keyboard-properties-xkbltadd.c
@@ -83,7 +83,7 @@ Files: capplets/keyboard/mate-keyboard-properties-xkb.c
        capplets/keyboard/mate-keyboard-properties-xkbpv.c
 Copyright: 2003-2007, Sergey V. Udaltsov
 License: GPL-2+
- 
+
 Files: capplets/about-me/fingerprint-strings.h
        capplets/about-me/mate-about-me-fingerprint.c
        capplets/about-me/mate-about-me-fingerprint.h
@@ -91,7 +91,7 @@ Files: capplets/about-me/fingerprint-strings.h
        font-viewer/totem-resources.h
 Copyright: 2007-2008, Bastien Nocera <hadess@hadess.net>
 License: GPL-2+
- 
+
 Files: capplets/windows/mate-window-properties.c
        libwindow-settings/marco-window-manager.c
        libwindow-settings/mate-window-manager.c
@@ -108,7 +108,7 @@ Files: capplets/common/capplet-util.c
        capplets/keyboard/mate-keyboard-properties-a11y.h
 Copyright: 2001-2002, Ximian, Inc.
 License: GPL-2+
- 
+
 Files: typing-break/drw-break-window.c
        typing-break/drw-break-window.h
        typing-break/drw-monitor.c
@@ -116,7 +116,7 @@ Files: typing-break/drw-break-window.c
 Copyright: 2002, CodeFactory AB
            2002-2003, Richard Hult <richard@imendio.com>
 License: GPL-2+
- 
+
 Files: capplets/appearance/appearance-support.c
        capplets/appearance/appearance-support.h
        capplets/common/dconf-util.c
@@ -230,7 +230,7 @@ License: GPL-2+
 Files: capplets/network/mate-network-properties.c
 Copyright: 2002, Sun Microsystems, Inc.
 License: GPL-2+
- 
+
 Files: capplets/common/mate-theme-apply.c
 Copyright: 2002, Jonathan Blandford <aes@gnome.org>
 License: LGPL-2.1+
@@ -262,6 +262,18 @@ Files: capplets/keybindings/eggaccelerators.c
 Copyright: 2002, Red Hat, Inc.
            1998-2001 Tim Janik
 License: LGPL-2+
+
+Files: man/*.1
+Copyright: 2014-2015, Stefano Karapetsas <stefano@karapetsas.com>
+           2014-2015, Vangelis Mouhtsis <vangelis@gnugr.org>
+           2014-2015, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+           GNOME Developers
+License: GPL-2+
+Comment:
+ Assuming license as found in COPYING file.
+ .
+ Several of the man pages have been derived from their
+ equivalent in the GNOME project.
 
 Files: po/*.po
        po/gnome-copyrights.txt
@@ -295,7 +307,6 @@ Files: capplets/about-me/icons/Makefile.am
        capplets/about-me/mate-about-me-password.h
        capplets/about-me/*.list
        capplets/about-me/*.ui
-       capplets/about-me/*.1
        capplets/about-me/*.in
        capplets/about-me/AUTHORS
        capplets/about-me/icons/left-index-finger.png
@@ -332,7 +343,6 @@ Files: capplets/about-me/icons/Makefile.am
        capplets/appearance/data/*.png
        capplets/appearance/data/*.pcf
        capplets/appearance/data/*.in
-       capplets/appearance/data/*.1
        capplets/appearance/data/*.ui
        capplets/appearance/Makefile.am
        capplets/common/Makefile.am
@@ -344,11 +354,9 @@ Files: capplets/about-me/icons/Makefile.am
        capplets/common/wm-common.c
        capplets/common/wm-common.h
        capplets/default-applications/Makefile.am
-       capplets/default-applications/*.1
        capplets/default-applications/*.in
        capplets/default-applications/*.ui
        capplets/display/icons/*x*/*.png
-       capplets/display/icons/scalable/*.svg
        capplets/display/Makefile.am
        capplets/display/TODO
        capplets/display/*.ui
@@ -368,7 +376,6 @@ Files: capplets/about-me/icons/Makefile.am
        capplets/mouse/*.png
        capplets/mouse/*.ui
        capplets/network/icons/*x*/*.png
-       capplets/network/icons/scalable/*.svg
        capplets/network/Makefile.am
        capplets/network/*.in
        capplets/network/*.ui
@@ -391,6 +398,7 @@ Files: capplets/about-me/icons/Makefile.am
        libwindow-settings/marco-window-manager.h
        libwindow-settings/mate-wm-manager.h
        libwindow-settings/*.in
+       man/Makefile.am
        po/LINGUAS
        po/POTFILES.in
        po/POTFILES.skip
@@ -499,7 +507,7 @@ License: MIT~OldStyle+LegalDisclaimer
  documentation, and that the name of the copyright holder not be used
  in advertising or publicity pertaining to distribution of the software
  without specific, written prior permission.  The copyright holder makes
- no representations about the suitability of this software for any purpose. 
+ no representations about the suitability of this software for any purpose.
  It is provided "as is" without express or implied warranty.
  .
  THE COPYRIGHT HOLDER DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
