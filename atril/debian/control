@@ -2,18 +2,24 @@ Source: atril
 Section: x11
 Priority: optional
 Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
-Uploaders: Steve Zesch <stevezesch2@gmail.com>
-Build-Depends: cdbs,
-               debhelper (>= 9),
+Uploaders: Mike Gabriel <sunweaver@debian.org>,
+           John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
+           Stefano Karapetsas <stefano@karapetsas.com>,
+           Vangelis Mouhtsis <vangelis@gnugr.org>,
+           Martin Wimpress <code@flexion.org>,
+Build-Depends: debhelper (>= 9),
+               gobject-introspection,
                intltool,
-               mate-common,
-               mate-icon-theme,
-               yelp-tools,
-               gtk-doc-tools,
-               libdbus-glib-1-dev,
-               libx11-dev,
-               libgtk-3-dev,
+               libcaja-extension-dev (>= 1.5.0),
+               libdjvulibre-dev,
+               libgail-3-dev,
+               libgirepository1.0-dev,
                libglib2.0-dev,
+               libgtk-3-dev,
+               libgxps-dev,
+               libkpathsea-dev,
+               libmate-desktop-dev (>= 1.9.0),
+               libpoppler-glib-dev,
                libsecret-1-dev,
                libxml2-dev,
                libsm-dev,
@@ -22,40 +28,38 @@ Build-Depends: cdbs,
                libpoppler-glib-dev,
                libspectre-dev,
                libtiff-dev,
-               libdjvulibre-dev,
-               libkpathsea-dev,
-               autotools-dev,
-               libgail-3-dev,
-               xsltproc,
-               libgxps-dev,
-               libwebkit2gtk-3.0-dev (>= 2.4.3),
-               libmate-desktop-3-dev (>= 1.9.0),
+               libwebkit2gtk-3.0-dev (>= 2.4.3) | libwebkit2gtk-4.0-dev (>= 2.4.3),
+               libx11-dev,
+               libxml2-dev,
                lsb-release,
-               gobject-introspection,
-               libgirepository1.0-dev,
-Standards-Version: 3.9.5
+               mate-common (>= 1.10),
+               mate-icon-theme,
+               xsltproc,
+               yelp-tools,
+               zlib1g-dev,
+Standards-Version: 3.9.6
 Homepage: http://www.mate-desktop.org/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-mate/atril.git;a=summary
 Vcs-Git: git://anonscm.debian.org/pkg-mate/atril.git
 
 Package: atril
 Architecture: any
-Depends: ${shlibs:Depends},
-         ${misc:Depends},
-         mate-icon-theme,
-         mate-desktop-common,
-         shared-mime-info,
-         atril-common (>= ${source:Version}),
+Depends: atril-common (>= ${source:Version}),
          libatrildocument3 (= ${binary:Version}),
-         libatrilview3 (= ${binary:Version})
+         libatrilview3 (= ${binary:Version}),
+         mate-desktop-common,
+         mate-icon-theme,
+         shared-mime-info,
+         ${misc:Depends},
+         ${shlibs:Depends},
 Recommends: dbus-x11,
-            gvfs
-Provides: pdf-viewer,
+            gvfs,
+Provides: djvu-viewer,
+          pdf-viewer,
           postscript-viewer,
-          djvu-viewer
-Suggests: unrar,
+Suggests: caja,
           poppler-data,
-          caja
+          unrar,
 Description: MATE document viewer
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -69,8 +73,8 @@ Package: atril-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
-         atril (= ${binary:Version})
+Depends: atril (= ${binary:Version}),
+         ${misc:Depends},
 Description: MATE document viewer (debugging symbols)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -83,8 +87,8 @@ Description: MATE document viewer (debugging symbols)
 
 Package: atril-common
 Architecture: all
-Depends: ${misc:Depends}
-Breaks: atril (<= 1.0.3-3)
+Depends: ${misc:Depends},
+Breaks: atril (<= 1.0.3-3),
 Description: MATE document viewer (common files)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -95,11 +99,10 @@ Description: MATE document viewer (common files)
 Package: libatrilview3
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends},
+Depends: libatrildocument3 (= ${binary:Version}),
          ${misc:Depends},
-         libatrildocument3 (= ${binary:Version})
-Breaks: libatril (<< 1.9.0)
-Replaces: libatril (<< 1.9.0)
+         ${shlibs:Depends},
+Replaces: libatril (<< 1.9.0),
 Description: MATE document viewing library
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -110,10 +113,10 @@ Description: MATE document viewing library
 Package: libatrilview-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends},
+Depends: libatrilview3 (= ${binary:Version}),
          ${misc:Depends},
-         libatrilview3 (= ${binary:Version})
-Breaks: libatril-dev (<< 1.9.0)
+         ${shlibs:Depends},
+Breaks: libatril-dev (<< 1.9.0),
 Description: MATE document viewing library (development files)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -126,9 +129,9 @@ Package: libatrilview3-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
-         libatrilview3 (= ${binary:Version})
-Breaks: atril-dbg (<< 1.9.0)
+Depends: libatrilview3 (= ${binary:Version}),
+         ${misc:Depends},
+Breaks: atril-dbg (<< 1.9.0),
 Description: MATE document viewing library (debugging symbols)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -143,10 +146,10 @@ Description: MATE document viewing library (debugging symbols)
 Package: libatrildocument3
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends},
-         ${misc:Depends}
-Breaks: libatril (<< 1.9.0)
-Replaces: libatril (<< 1.9.0)
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: libatril (<< 1.9.0),
+Replaces: libatril (<< 1.9.0),
 Description: MATE document rendering library
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -157,11 +160,11 @@ Description: MATE document rendering library
 Package: libatrildocument-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends},
+Depends: libatrildocument3 (= ${binary:Version}),
          ${misc:Depends},
-         libatrildocument3 (= ${binary:Version})
-Breaks: libatril-dev (<< 1.9.0)
-Replaces: libatril-dev (<< 1.9.0)
+         ${shlibs:Depends},
+Breaks: libatril-dev (<< 1.9.0),
+Replaces: libatril-dev (<< 1.9.0),
 Description: MATE document rendering library (development files)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -174,9 +177,9 @@ Package: libatrildocument3-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
-         libatrildocument3 (= ${binary:Version})
-Breaks: atril-dbg (<< 1.9.0)
+Depends: libatrildocument3 (= ${binary:Version}),
+         ${misc:Depends},
+Breaks: atril-dbg (<< 1.9.0),
 Description: MATE document rendering library (debugging symbols)
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -192,7 +195,7 @@ Package: gir1.2-atril
 Architecture: any
 Depends: ${gir:Depends},
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: GObject introspection data for Atril
  Atril is a simple multi-page document viewer.  It can display
  and print PostScript (PS), Encapsulated PostScript (EPS), DJVU, DVI and
@@ -200,5 +203,5 @@ Description: GObject introspection data for Atril
  .
  This package contains introspection data for Atril.
  .
- It can be used by packages using the GIRepository format to generate 
+ It can be used by packages using the GIRepository format to generate
  dynamic bindings.
