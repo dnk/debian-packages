@@ -80,7 +80,7 @@ for i in range(0, len(args)):
         else:
             os.system("dpkg-buildpackage -b -Zxz -uc -tc 2>&1 | tee build.log")
         os.system("mv -v build.log ~/mate/logs/%s.log" % package)
-        os.system("rm -v ../*.changes")
+        os.system("mv -v ../*.changes ~/mate/deb/")
         os.system("mv -v ../*.deb ~/mate/deb/")
     os.chdir(os.path.join(os.path.expanduser("~"), "mate"))
     os.system("rm -rf /tmp/%s/ " % package)
