@@ -111,8 +111,8 @@ Depends: libdconf-dev,
          libstartup-notification0-dev,
          ${misc:Depends},
          ${shlibs:Depends},
-Breaks: libmatedesktop-dev,
-Replaces: libmatedesktop-dev,
+Breaks: libmatedesktop-dev,libmatedesktop-3-dev
+Replaces: libmatedesktop-dev,libmatedesktop-3-dev
 Description: Library with common API for various MATE modules (development files)
  The MATE component mate-desktop contains the libmate-desktop library, the
  mate-about program, as well as some desktop-wide documents.
