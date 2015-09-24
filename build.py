@@ -70,7 +70,7 @@ for i in range(0, len(args)):
     new_rules_file.close()
 
     if options.source:
-        os.system("dpkg-buildpackage -S -Zxz -uc -us")
+        os.system("dpkg-buildpackage -S -Zxz -uc -us -d")
         os.system("mv -v ../*.dsc ~/mate/deb/")
         os.system("mv -v ../*.xz ~/mate/deb/")
         os.system("mv -v ../*.changes ~/mate/deb/")
