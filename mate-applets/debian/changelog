@@ -1,3 +1,9 @@
+mate-applets (1.10.90) wily; urgency=medium
+
+  * New development release
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Thu, 24 Sep 2015 11:34:43 +0300
+
 mate-applets (1.10.3-1) unstable; urgency=medium
 
   * New upstream bugfix release
