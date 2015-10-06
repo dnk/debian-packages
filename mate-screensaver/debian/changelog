@@ -1,3 +1,9 @@
+mate-screensaver (1.10.90) wily; urgency=medium
+
+  * New developemnt release
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 06 Oct 2015 12:34:15 +0300
+
 mate-screensaver (1.10.2-1) unstable; urgency=medium
 
   * New upstream bugfix release
