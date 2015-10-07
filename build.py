@@ -10,6 +10,7 @@ import sys
 parser = optparse.OptionParser()
 parser.add_option("-s", "--source", dest="source", action="store_true", help="Build source package")
 parser.add_option("-i", "--i386", dest="i386", action="store_true", help="Build i386 binary package")
+parser.add_option("-a", "--attempt", dest="attempt", type="int", help="Build attempt number")
 (options, args) = parser.parse_args()
 
 if len(args) == 0:
@@ -47,6 +48,8 @@ for i in range(0, len(args)):
     date = datetime.date.today().strftime("%Y%m%d")
     head = subprocess.check_output(["git", "rev-parse", "HEAD"])[:7]
     suffix = "+git." + date + "." + head
+    if options.attempt:
+        suffix += "~" + str(options.attempt)
     orig_changelog_file = codecs.open("debian/changelog", encoding="utf-8", mode="r")
     orig_changelog = orig_changelog_file.read().splitlines()
     orig_changelog_file.close()
