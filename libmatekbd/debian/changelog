@@ -1,8 +1,14 @@
-libmatekbd (1.10.90) wily; urgency=medium
+libmatekbd (1.12.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 06 Oct 2015 14:34:11 +0300
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 03 Nov 2015 13:14:32 +0000
+
+libmatekbd (1.11.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 15 Oct 2015 16:57:37 +0300
 
 libmatekbd (1.10.0-1) unstable; urgency=low
 

@@ -1,3 +1,15 @@
+mate-themes (1.12.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 03 Nov 2015 13:21:26 +0000
+
+mate-themes (1.11.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Tue, 27 Oct 2015 11:13:59 +0300
+
 mate-themes (1.10.0-1) unstable; urgency=medium
 
   * New upstream release

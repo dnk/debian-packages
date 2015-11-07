@@ -1,8 +1,20 @@
-mate-screensaver (1.10.90) wily; urgency=medium
+mate-screensaver (1.12.0-1) unstable; urgency=medium
 
-  * New developemnt release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 06 Oct 2015 12:34:15 +0300
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 03 Nov 2015 13:20:26 +0000
+
+mate-screensaver (1.11.1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 21 Oct 2015 10:14:48 +0300
+
+mate-screensaver (1.11.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 15 Oct 2015 17:00:49 +0300
 
 mate-screensaver (1.10.2-1) unstable; urgency=medium
 

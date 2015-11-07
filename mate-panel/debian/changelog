@@ -1,8 +1,20 @@
-mate-panel (1.10.90) wily; urgency=medium
+mate-panel (1.12.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Thu, 24 Sep 2015 11:26:26 +0300
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 03 Nov 2015 13:19:56 +0000
+
+mate-panel (1.11.1-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 29 Oct 2015 10:57:32 +0300
+
+mate-panel (1.11.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 15 Oct 2015 16:58:54 +0300
 
 mate-panel (1.10.1-1) unstable; urgency=medium
 

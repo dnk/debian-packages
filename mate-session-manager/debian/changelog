@@ -1,8 +1,14 @@
-mate-session-manager (1.10.90) wily; urgency=medium
+mate-session-manager (1.12.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Wed, 23 Sep 2015 11:42:49 +0300
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 03 Nov 2015 13:20:46 +0000
+
+mate-session-manager (1.11.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 15 Oct 2015 17:01:24 +0300
 
 mate-session-manager (1.10.2-1) unstable; urgency=medium
 
