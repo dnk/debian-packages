@@ -3,9 +3,9 @@ Section: x11
 Priority: optional
 Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Build-Depends: debhelper (>= 9),
-               libmate-panel-applet-dev,
+               libmate-panel-applet-dev (>= 1.12),
                libcaja-extension-dev,
-               libmate-desktop-3-dev,
+               libmate-desktop-3-dev (>= 1.12),
                libmate-menu-dev,
                libmate-slab-dev,
                libgtk-3-dev,
@@ -20,7 +20,7 @@ Build-Depends: debhelper (>= 9),
                libnm-glib-dev,
                libnm-util-dev,
                libiw-dev,
-               mate-common
+               mate-common (>= 1.12)
 Standards-Version: 3.9.5
 Homepage: http://www.mate-desktop.org/
 
