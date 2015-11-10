@@ -47,7 +47,7 @@ for i in range(0, len(args)):
     # debian/changelog
     date = datetime.date.today().strftime("%Y%m%d")
     head = subprocess.check_output(["git", "rev-parse", "HEAD"])[:7]
-    suffix = "+git." + date + "." + head + "~" + str(options.attempt)
+    suffix = "+git." + date + "~" + str(options.attempt) + "." + head
     orig_changelog_file = codecs.open("debian/changelog", encoding="utf-8", mode="r")
     orig_changelog = orig_changelog_file.read().splitlines()
     orig_changelog_file.close()
