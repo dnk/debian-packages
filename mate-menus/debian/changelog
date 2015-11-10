@@ -1,3 +1,9 @@
+mate-menus (1.12.90) wily; urgency=medium
+
+  * New development release
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 10 Nov 2015 11:02:16 +0300
+
 mate-menus (1.12.0-1) unstable; urgency=medium
 
   * New upstream release
