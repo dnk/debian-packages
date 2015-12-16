@@ -47,6 +47,8 @@ Suggests: engrampa,
           meld,
 Breaks: libcaja-extension (<< 1.10.0),
         mate-session-manager (<< 1.8.1-7),
+        libcaja-extension1 (<< 1.10.0)
+Replaces: libcaja-extension1 (<< 1.10.0)
 Description: file manager for the MATE desktop
  Caja is the official file manager for the MATE desktop. It allows one
  to browse directories, preview files and launch applications associated
@@ -147,7 +149,7 @@ Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends},
 Depends: libcaja-extension1 (= ${binary:Version}),
          ${misc:Depends},
-Description: libraries for caja components (debugging symbols)
+Description: libraries for Caja components (debugging symbols)
  Caja is the official file manager for the MATE desktop. It allows one
  to browse directories, preview files and launch applications associated
  with them. It is also responsible for handling the icons on the MATE

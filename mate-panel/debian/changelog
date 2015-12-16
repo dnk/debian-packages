@@ -2,7 +2,13 @@ mate-panel (1.12.90) wily; urgency=medium
 
   * New development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 10 Nov 2015 11:01:32 +0300
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Wed, 16 Dec 2015 10:57:15 +0300
+
+mate-panel (1.12.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Mon, 07 Dec 2015 11:17:41 +0300
 
 mate-panel (1.12.0-1) unstable; urgency=medium
 
