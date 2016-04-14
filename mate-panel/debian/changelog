@@ -1,8 +1,32 @@
-mate-panel (1.12.90) wily; urgency=medium
+mate-panel (1.14.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Wed, 16 Dec 2015 10:57:15 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Mon, 11 Apr 2016 11:30:40 +0300
+
+mate-panel (1.13.2-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Tue, 29 Mar 2016 11:07:39 +0300
+
+mate-panel (1.13.1-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 24 Feb 2016 14:01:40 +0300
+
+mate-panel (1.13.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Tue, 16 Feb 2016 11:39:18 +0300
+
+mate-panel (1.12.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Mon, 25 Jan 2016 14:52:49 +0300
 
 mate-panel (1.12.1-1) unstable; urgency=medium
 

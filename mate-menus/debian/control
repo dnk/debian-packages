@@ -23,6 +23,7 @@ Depends: libmate-menu2 (= ${binary:Version}),
          ${misc:Depends},
          ${python:Depends},
          ${shlibs:Depends},
+Breaks: mate-control-center (<< 1.13.0),
 Description: implementation of the freedesktop menu specification for MATE
  The package contains an implementation of the draft
  "Desktop Menu Specification" from freedesktop.org:
@@ -74,7 +75,6 @@ Section: introspection
 Architecture: any
 Depends: ${gir:Depends},
          ${misc:Depends},
-         ${python:Depends},
          ${shlibs:Depends},
 Description: GObject introspection data for the MATE menu specification
  This package contains introspection data for MATE menu specification, an

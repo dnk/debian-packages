@@ -1,8 +1,14 @@
-mate-applets (1.12.90) wily; urgency=medium
+mate-applets (1.14.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Wed, 16 Dec 2015 10:55:54 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Mon, 11 Apr 2016 11:30:37 +0300
+
+mate-applets (1.13.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Tue, 16 Feb 2016 11:39:15 +0300
 
 mate-applets (1.12.1-1) unstable; urgency=medium
 
