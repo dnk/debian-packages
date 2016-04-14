@@ -15,11 +15,11 @@ Build-Depends: debhelper (>= 9),
                libdconf-dev,
                libglib2.0-dev,
                libgtk-3-dev,
-               libmate-desktop-3-dev (>= 1.12),
+               libmate-desktop-3-dev (>= 1.14),
                libsm-dev,
                libvte-2.91-dev,
                libx11-dev,
-               mate-common (>= 1.12),
+               mate-common (>= 1.14),
                yelp-tools,
 Homepage: http://www.mate-desktop.org
 
