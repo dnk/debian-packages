@@ -22,7 +22,7 @@ Build-Depends: debhelper (>= 9),
                libxrender-dev,
                libxt-dev,
                libxtst-dev,
-               mate-common (>= 1.12),
+               mate-common (>= 1.14),
                xmlto,
                xsltproc,
 Homepage: http://www.mate-desktop.org/
@@ -30,7 +30,7 @@ Homepage: http://www.mate-desktop.org/
 Package: mate-session-manager
 Architecture: any
 Depends: dbus-x11,
-         mate-desktop-common (>= 1.12),
+         mate-desktop-common (>= 1.14),
          upower,
          ${misc:Depends},
          ${shlibs:Depends},
