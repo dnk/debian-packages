@@ -1,3 +1,9 @@
+libmatemixer (1.14.90) xenial; urgency=medium
+
+  * New development release
+
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Thu, 14 Apr 2016 19:35:20 +0300
+
 libmatemixer (1.14.0-1) unstable; urgency=medium
 
   * New upstream release
