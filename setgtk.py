@@ -41,6 +41,7 @@ replaces.append(["libmate-desktop-2", "libmate-desktop-3"])
 replaces.append(["libmate-desktop-2-dev", "libmate-desktop-3-dev"])
 replaces.append(["libmate-desktop-2-17", "libmate-desktop-3-17"])
 replaces.append(["libmate-desktop-2-17-dbg", "libmate-desktop-3-17-dbg"])
+replaces.append(["libmateweather-dev", "libgweather-3-dev"])
 
 # these packages are GTK+3 only now
 excludes = ["mate-system-monitor", "mozo"]

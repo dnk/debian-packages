@@ -20,7 +20,7 @@ Build-Depends: debhelper (>= 9),
                libiw-dev
                libmate-desktop-3-dev (>= 1.14),
                libmate-panel-applet-dev (>= 1.14),
-               libmateweather-dev (>= 1.14),
+               libgweather-3-dev,
                libnotify-dev,
                libpolkit-gobject-1-dev,
                libupower-glib-dev,
