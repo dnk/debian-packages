@@ -8,6 +8,7 @@ Uploaders: Mike Gabriel <sunweaver@debian.org>,
            Vangelis Mouhtsis <vangelis@gnugr.org>,
 Build-Depends: autotools-dev,
                debhelper (>= 9),
+               dpkg-dev (>= 1.16.1.1),
                intltool,
                libcanberra-gtk3-dev,
                libdbus-glib-1-dev,
@@ -33,7 +34,7 @@ Build-Depends: autotools-dev,
                libxt-dev,
                mate-common (>= 1.14),
                x11proto-kb-dev,
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://www.mate-desktop.org/
 
 Package: mate-settings-daemon

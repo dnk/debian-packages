@@ -5,24 +5,25 @@ Maintainer: Stefano Karapetsas <stefano@karapetsas.com>
 Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>,
            Stefano Karapetsas <stefano@karapetsas.com>,
            Mike Gabriel <sunweaver@debian.org>,
+           Vangelis Mouhtsis <vangelis@gnugr.org>,
 Build-Depends: debhelper (>= 9),
                dh-python,
+               dpkg-dev (>= 1.16.1.1),
                gobject-introspection,
                intltool,
                libgirepository1.0-dev,
                libglib2.0-dev,
-               mate-common (>= 1.12),
+               mate-common (>= 1.14),
                python-all-dev (>= 2.7),
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://www.mate-desktop.org/
 X-Python-Version: >= 2.7
 
 Package: mate-menus
 Architecture: any
-Depends: libmate-menu2 (= ${binary:Version}),
+Depends: python-mate-menu (= ${binary:Version}),
          ${misc:Depends},
          ${python:Depends},
-         ${shlibs:Depends},
 Breaks: mate-control-center (<< 1.13.0),
 Description: implementation of the freedesktop menu specification for MATE
  The package contains an implementation of the draft

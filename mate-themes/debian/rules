@@ -7,8 +7,7 @@ DHFLAGS=--parallel
 
 override_dh_install:
 	# remove extra-license-file
-	rm -rfv debian/mate-themes/usr/share/themes/Menta/COPYING
-	rm -rfv debian/mate-themes/usr/share/themes/BlueMenta/COPYING
+	rm -rfv debian/mate-themes/usr/share/themes/*/COPYING
 	rm -rfv debian/mate-themes/usr/share/themes/TraditionalOk/doc/gpl-3.0*.txt
 	dh_install --fail-missing
 
@@ -18,7 +17,7 @@ override_dh_installchangelogs:
 override_dh_auto_configure:
 	# upstream tarball is without configure. autogen.sh will create it
 	NOCONFIGURE=1 ./autogen.sh
-	dh_auto_configure $(DHFLAGS) --
+	dh_auto_configure $(DHFLAGS)
 
 get-orig-source:
 	uscan --noconf --force-download --rename --download-current-version --destdir=..

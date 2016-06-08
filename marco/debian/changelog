@@ -2,7 +2,19 @@ marco (1.14.90) xenial; urgency=medium
 
   * New development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Fri, 15 Apr 2016 10:41:35 +0300
+ -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Wed, 08 Jun 2016 11:02:59 +0300
+
+marco (1.14.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Tue, 24 May 2016 10:15:59 +0300
+
+marco (1.14.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 20 Apr 2016 15:23:19 +0300
 
 marco (1.14.0-1) unstable; urgency=medium
 
