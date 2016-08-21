@@ -1,8 +1,8 @@
-mate-panel (1.14.90) xenial; urgency=medium
+mate-panel (1.15.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Tue, 19 Apr 2016 10:56:15 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 15 Jun 2016 10:49:56 +0300
 
 mate-panel (1.14.0-1) unstable; urgency=medium
 

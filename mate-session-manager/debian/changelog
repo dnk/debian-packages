@@ -1,8 +1,8 @@
-mate-session-manager (1.14.90) xenial; urgency=medium
+mate-session-manager (1.15.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Fri, 15 Apr 2016 11:46:22 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 15 Jun 2016 10:49:57 +0300
 
 mate-session-manager (1.14.0-1) unstable; urgency=medium
 
