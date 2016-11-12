@@ -1,8 +1,14 @@
-mate-common (1.15.90) xenial; urgency=medium
+mate-common (1.16.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Mon, 22 Aug 2016 00:16:09 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 22 Sep 2016 17:36:34 +0300
+
+mate-common (1.15.1-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Fri, 09 Sep 2016 13:57:58 +0300
 
 mate-common (1.15.0-1) unstable; urgency=medium
 
