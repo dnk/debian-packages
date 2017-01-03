@@ -7,10 +7,9 @@ DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
 %:
-	dh $@ $(DHFLAGS)
+	dh $@ $(DHFLAGS) --with gir
 
 override_dh_install:
-	rm -rfv debian/tmp/usr/lib/*/pluma/plugin-loaders/*.la
 	rm -rfv debian/tmp/usr/lib/*/pluma/plugins/*.la
 	dh_install --fail-missing
 
@@ -20,9 +19,7 @@ override_dh_auto_configure:
 	dh_auto_configure $(DHFLAGS) -- \
 		--disable-silent-rules \
 		--libexecdir=/usr/lib/ \
-		--disable-python \
-		--enable-gtk-doc \
-		--with-gtk=3.0
+		--enable-gtk-doc
 
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS

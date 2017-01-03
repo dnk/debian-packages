@@ -1,8 +1,8 @@
-mate-panel (1.16.90) yakkety; urgency=medium
+mate-panel (1.17.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Sat, 19 Nov 2016 19:42:20 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 24 Nov 2016 18:47:14 +0300
 
 mate-panel (1.16.0-1) unstable; urgency=medium
 

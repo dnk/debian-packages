@@ -1,3 +1,21 @@
+pluma (1.17.2-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Wed, 14 Dec 2016 11:00:54 +0300
+
+pluma (1.17.1-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Sun, 11 Dec 2016 18:59:17 +0300
+
+pluma (1.17.0-1) unstable; urgency=medium
+
+  * New upstream development release
+
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 10 Nov 2016 13:39:19 +0300
+
 pluma (1.16.0-1) unstable; urgency=medium
 
   * New upstream release

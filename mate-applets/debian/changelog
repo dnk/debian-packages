@@ -1,8 +1,8 @@
-mate-applets (1.16.90) yakkety; urgency=medium
+mate-applets (1.17.0-1) unstable; urgency=medium
 
-  * New development release
+  * New upstream development release
 
- -- Denis Gorodnichev <denis.gorodnichev@gmail.com>  Sat, 19 Nov 2016 22:16:58 +0300
+ -- Vlad Orlov <monsta@inbox.ru>  Thu, 01 Dec 2016 12:45:28 +0300
 
 mate-applets (1.16.0-1) unstable; urgency=medium
 

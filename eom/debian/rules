@@ -7,7 +7,7 @@ DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
 %:
-	dh $@ $(DHFLAGS)
+	dh $@ $(DHFLAGS) --with gir
 
 override_dh_install:
 	rm -rfv debian/tmp/usr/lib/*/eom/plugins/*.la
@@ -16,8 +16,7 @@ override_dh_install:
 override_dh_auto_configure:
 	NOCONFIGURE=1 ./autogen.sh
 	dh_auto_configure $(DHFLAGS) -- \
-		--disable-python \
-		--with-gtk=3.0
+		--disable-silent-rules
 
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS
